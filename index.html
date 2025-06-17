@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свадебное приглашение</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #fffafa;
+      font-family: 'Playfair Display', serif;
+      color: #000;
+      padding: 20px;
+    }
+    .section {
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+    .section.visible {
+      opacity: 1;
+    }
+    h1.names {
+      font-family: 'Rouge Script', cursive;
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .date {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .invitation {
+      font-size: 18px;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+    .timeline {
+      border-left: 2px solid #000;
+      margin-top: 40px;
+      padding-left: 20px;
+      text-align: left;
+    }
+    .timeline-event {
+      margin-bottom: 20px;
+    }
+    .timeline-time {
+      font-weight: bold;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .form-section {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background: transparent;
+    }
+    .radio-group {
+      margin-bottom: 20px;
+    }
+    .radio-option {
+      margin: 10px 0;
+    }
+    .submit-btn {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 15px 40px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      display: block;
+      margin: 30px auto;
+    }
+    .details img {
+      width: 40px;
+      margin: 20px 0;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section visible">
+    <p>ПРИГЛАШЕНИЕ НА СВАДЬБУ</p>
+    <h1 class="names">Натали <br> Андрей</h1>
+    <div class="date">
+      <div>август</div>
+      <div style="font-size: 32px; font-weight: bold;">29</div>
+      <div>2025</div>
+    </div>
+  </div>
+
+  <div class="section visible">
+    <h2>ДОРОГИЕ РОДНЫЕ И ДРУЗЬЯ!</h2>
+    <p class="invitation">
+      С радостью приглашаем Вас на нашу свадьбу!<br>
+      Мы счастливы объединить наши жизни и хотели бы поделиться этим с Вами.
+    </p>
+  </div>
+
+  <div class="section visible">
+    <h2>МЕСТО ПРОВЕДЕНИЯ ТОРЖЕСТВА</h2>
+    <p><strong>ЖДЕМ ВАС:</strong><br>
+    «Петергоф лофт»<br>
+    <strong>ПО АДРЕСУ:</strong><br>
+    территория Троицкая гора, д. 33</p>
+  </div>
+
+  <div class="section visible">
+    <h2>ПЛАН ДНЯ</h2>
+    <div class="timeline">
+      <div class="timeline-event">
+        <div class="timeline-time">13:30</div>
+        <div>СБОР ГОСТЕЙ<br><small>встречаемся, настраиваемся на весёлую свадьбу, главное не опаздывать.</small></div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-time">14:00</div>
+        <div>РЕГИСТРАЦИЯ<br><small>немного радостных трогательных формальностей — то, ради чего собрались.</small></div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-time">15:00</div>
+        <div>БАНКЕТ<br><small>самое время для вкусной еды, развлечений и поздравлений.</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section visible">
+    <h2>ДРЕСС-КОД</h2>
+    <p class="invitation">
+      Мы очень старались сделать праздник красивым и будем рады,<br>
+      если в своих нарядах Вы поддержите цветовую гамму нашей свадьбы!
+    </p>
+  </div>
+
+  <div class="section visible details">
+    <h2>ДЕТАЛИ</h2>
+    <img src="6.png" alt="icon">
+    <p>Свои тёплые слова и пожелания приносите в сердцах, а подарки – в конверте.</p>
+  </div>
+
+  <div class="section visible form-section">
+    <h2>АНКЕТА</h2>
+    <p>Пожалуйста, подтвердите свое присутствие</p>
+
+    <div class="form-group">
+      <label>Ваше Имя и Фамилия</label>
+      <input type="text" name="name">
+    </div>
+
+    <div class="form-group radio-group">
+      <label>Вы сможете присутствовать на торжестве?</label>
+      <div class="radio-option">
+        <input type="radio" name="attendance" value="Да"> Да, обязательно приду/придем
+      </div>
+      <div class="radio-option">
+        <input type="radio" name="attendance" value="Нет"> К сожалению, не смогу прийти
+      </div>
+      <div class="radio-option">
+        <input type="radio" name="attendance" value="Позже"> Отвечу позже
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Если Вы будете со своей парой, пожалуйста, впишите имя</label>
+      <input type="text" name="partner">
+    </div>
+
+    <button class="submit-btn">ОТВЕТИТЬ</button>
+  </div>
+
+  <script>
+    // Добавим базовую анимацию появления по порядку
+    const sections = document.querySelectorAll('.section');
+    let delay = 0;
+    sections.forEach((section, index) => {
+      setTimeout(() => {
+        section.classList.add('visible');
+      }, delay);
+      delay += 600;
+    });
+  </script>
+</body>
+</html>
